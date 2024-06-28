@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <title>20 Años Universidad Hemisferios</title>
+   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.js"></script>
+   <style>
+       body { margin: 0; overflow: hidden; }
+       .header { text-align: center; padding: 20px; background-color: #003366; color: white; }
+   </style>
+</head>
+<body>
+   <div class="header">
+       <h1>20 Años de la Universidad Hemisferios</h1>
+       <p>¡Celebrando dos décadas de excelencia académica!</p>
+   </div>
+   
+   <a-scene embedded arjs>
+       <!-- Marcador AR, puede ser el logo de la universidad -->
+       <a-marker type="pattern"
+       url="ruta/a/tu/marcador.patt">
+           <!-- Modelo 3D o contenido multimedia -->
+           <a-box position='0 0.5 0' material='color: blue;'></a-box>
+           <a-entity
+               position="0 1 0"
+               text-geometry="value: 20 Años; font: #url(https://cdn.aframe.io/fonts/mozillavr.fnt)"
+               material="color: yellow;">
+           </a-entity>
+       </a-marker>
+       <a-entity camera></a-entity>
+   </a-scene>
+</body>
+</html>
